@@ -1,0 +1,131 @@
+.experience__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.experience__container > div {
+  background: var(--color-bg-variant);
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.experience__container > div:hover {
+  background: transparent;
+  background-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.experience__container > div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.experience__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+
+.experience__details {
+  display: flex;
+  gap: 1rem;
+}
+.experience__details-icon {
+  margin-top: 6px;
+  color: var(--color-primary);
+}
+/* ======================= ProgressBar =============================== */
+.languagesFrameworks {
+  margin-bottom: 0.5rem;
+}
+.languagesList {
+  padding-top: 0.5rem;
+}
+.languagesList li {
+  color: #ebe8e8;
+}
+/* Les progressBar */
+.progressBar {
+  height: 0.4rem;
+  background: rgb(99, 164, 233);
+  border-radius: 50px;
+  margin-top: 0.2rem;
+  position: relative;
+}
+/* .progressBar:after {
+  content: '';
+  position: absolute;
+  background: rgb(99, 164, 233);
+  border-radius: 50px;
+  height: 0.4rem;
+  width: 0;
+  animation: line 2s ease-out forwards;
+
+  @keyframes line {
+    to {
+      width: 100%;
+    }
+  }
+} */
+
+.years {
+  font-size: 0.65rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.years span {
+  width: 36%;
+}
+span:nth-child(2) {
+  text-align: center;
+  width: 20%;
+}
+span:nth-child(3) {
+  text-align: right;
+  width: 10%;
+}
+
+span:nth-child(2):before,
+span:nth-child(3):before {
+  content: '';
+  background: rgba(180, 179, 179, 0.507);
+  position: absolute;
+  height: 230px;
+  width: 1px;
+  transform: translate(9px, 19px);
+}
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES ==================== */
+
+@media screen and (max-width: 1024px) {
+  .experience__container {
+    grid-template-columns: 1fr;
+  }
+  .experience__container > div {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  .experience__content {
+    padding: 1rem;
+  }
+}
+
+/* ============== MEDIA QUERIES (SMALL DEVICES ==================== */
+
+@media screen and (max-width: 600px) {
+  .experience__container {
+    gap: 1rem;
+  }
+
+  .experience__container > div {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
